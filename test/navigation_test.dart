@@ -6,7 +6,11 @@ void main() {
   testWidgets('Drawer navigates between Home and Porfolio', (tester) async {
     await tester.pumpWidget(const MainApp());
 
-    expect(find.text('Bienvenido a mi portfolio'), findsOneWidget);
+    expect(find.text('Canarias Natural'), findsOneWidget);
+    expect(find.text('ESCUBRE CANARIAS'), findsOneWidget);
+    expect(find.text('Una especie nueva cada día'), findsOneWidget);
+    expect(find.text('DESCUBRIR HOY'), findsOneWidget);
+    expect(find.text('Explora la biodiversidad\nde las islas'), findsOneWidget);
 
     await tester.tap(find.byIcon(Icons.menu));
     await tester.pumpAndSettle();
@@ -23,6 +27,6 @@ void main() {
     await tester.tap(find.text('Home'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Bienvenido a mi portfolio'), findsOneWidget);
+    expect(find.text('ESCUBRE CANARIAS'), findsOneWidget);
   });
 }
