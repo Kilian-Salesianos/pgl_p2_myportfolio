@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../styles/styles.dart';
 import 'portfolio_section.dart';
 
 class PortfolioHeader extends StatelessWidget {
@@ -14,14 +15,14 @@ class PortfolioHeader extends StatelessWidget {
         Container(
           height: 48,
           width: double.infinity,
-          color: Colors.deepPurple,
-          child: const Center(
+          color: porfolioHeaderStyle.backgroundColor,
+          child: Center(
             child: Text(
               'Este es mi portfolio modificado',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.yellow,
-                fontWeight: FontWeight.bold,
+                color: porfolioHeaderStyle.foregroundColor,
+                fontWeight: porfolioHeaderStyle.fontWeight,
               ),
             ),
           ),
@@ -30,7 +31,7 @@ class PortfolioHeader extends StatelessWidget {
           height: 112,
           width: double.infinity,
           child: Container(
-            color: Colors.yellow,
+            color: porfolioProfileStyle.backgroundColor,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
               children: [
@@ -44,19 +45,24 @@ class PortfolioHeader extends StatelessWidget {
                     fit: BoxFit.cover,
                     cacheWidth: 160,
                     cacheHeight: 160,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const SizedBox(
-                          width: 80,
-                          height: 80,
-                          child: Icon(Icons.person, color: Colors.black),
-                        ),
+                    errorBuilder: (context, error, stackTrace) => SizedBox(
+                      width: 80,
+                      height: 80,
+                      child: Icon(
+                        Icons.person,
+                        color: porfolioProfileStyle.foregroundColor,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(width: 15),
-                const Expanded(
+                Expanded(
                   child: Text(
                     'Soy alumno de 2 de DAM y lo estoy intentando',
-                    style: TextStyle(fontSize: 16, color: Colors.black),
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: porfolioProfileStyle.foregroundColor,
+                    ),
                   ),
                 ),
               ],

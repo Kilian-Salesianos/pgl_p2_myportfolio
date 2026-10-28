@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
+import '../styles/styles.dart';
+
 class RepositorySection extends StatelessWidget {
   const RepositorySection({super.key});
 
@@ -9,7 +11,7 @@ class RepositorySection extends StatelessWidget {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Colors.deepPurple,
+        color: porfolioRepositoryStyle.backgroundColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: SingleChildScrollView(
@@ -23,38 +25,44 @@ class RepositorySection extends StatelessWidget {
               fit: BoxFit.contain,
               cacheWidth: 320,
               cacheHeight: 320,
-              errorBuilder: (context, error, stackTrace) => const SizedBox(
+              errorBuilder: (context, error, stackTrace) => SizedBox(
                 width: 160,
                 height: 160,
-                child: Icon(Icons.public, size: 120, color: Colors.yellow),
+                child: Icon(
+                  Icons.public,
+                  size: 120,
+                  color: porfolioRepositoryStyle.accentColor,
+                ),
               ),
             ),
             const SizedBox(height: 12),
             Text(
               'Todos deben jugar limbus company',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headlineSmall
-                  ?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: porfolioRepositoryStyle.foregroundColor,
+                fontWeight: porfolioRepositoryStyle.fontWeight,
+              ),
             ),
             const SizedBox(height: 12),
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.yellow,
+                color: porfolioRepositoryStyle.accentColor,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: QrImageView(
                 data: 'https://github.com/Kilian-Salesianos',
                 version: QrVersions.auto,
                 size: 200,
-                backgroundColor: Colors.yellow,
-                eyeStyle: const QrEyeStyle(
+                backgroundColor: porfolioRepositoryStyle.accentColor,
+                eyeStyle: QrEyeStyle(
                   eyeShape: QrEyeShape.square,
-                  color: Colors.black,
+                  color: porfolioRepositoryStyle.qrColor,
                 ),
-                dataModuleStyle: const QrDataModuleStyle(
+                dataModuleStyle: QrDataModuleStyle(
                   dataModuleShape: QrDataModuleShape.square,
-                  color: Colors.black,
+                  color: porfolioRepositoryStyle.qrColor,
                 ),
               ),
             ),

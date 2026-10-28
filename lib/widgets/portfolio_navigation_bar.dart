@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../styles/styles.dart';
 import 'portfolio_section.dart';
 
 class PortfolioNavigationBar extends StatelessWidget {
@@ -17,7 +18,7 @@ class PortfolioNavigationBar extends StatelessWidget {
     return Container(
       height: 72,
       width: double.infinity,
-      color: Colors.deepPurple,
+      color: porfolioFooterStyle.backgroundColor,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       child: Row(
         children: [
@@ -63,9 +64,17 @@ class _SectionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FilledButton(
       style: FilledButton.styleFrom(
-        backgroundColor: selected ? Colors.yellow : Colors.deepPurple,
-        foregroundColor: selected ? Colors.black : Colors.yellow,
-        side: const BorderSide(color: Colors.yellow),
+        backgroundColor: selected
+            ? porfolioNavigationSelectedStyle.backgroundColor
+            : porfolioNavigationUnselectedStyle.backgroundColor,
+        foregroundColor: selected
+            ? porfolioNavigationSelectedStyle.foregroundColor
+            : porfolioNavigationUnselectedStyle.foregroundColor,
+        side: BorderSide(
+          color: selected
+              ? porfolioNavigationSelectedStyle.borderColor
+              : porfolioNavigationUnselectedStyle.borderColor,
+        ),
       ),
       onPressed: onPressed,
       child: Text(label),

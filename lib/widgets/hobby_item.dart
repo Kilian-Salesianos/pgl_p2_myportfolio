@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../styles/styles.dart';
+
 class HobbyItem extends StatelessWidget {
   const HobbyItem({super.key, required this.hobbyName});
 
@@ -10,8 +12,8 @@ class HobbyItem extends StatelessWidget {
     return Container(
       height: 50,
       decoration: BoxDecoration(
-        color: Colors.deepPurple,
-        border: Border.all(color: Colors.black, width: 2),
+        color: porfolioHobbyStyle.backgroundColor,
+        border: Border.all(color: porfolioHobbyStyle.borderColor, width: 2),
       ),
       child: Center(
         child: Padding(
@@ -20,7 +22,10 @@ class HobbyItem extends StatelessWidget {
             fit: BoxFit.scaleDown,
             child: Text(
               hobbyName,
-              style: const TextStyle(color: Colors.yellow, fontSize: 16),
+              style: TextStyle(
+                color: porfolioHobbyStyle.foregroundColor,
+                fontSize: 16,
+              ),
             ),
           ),
         ),
