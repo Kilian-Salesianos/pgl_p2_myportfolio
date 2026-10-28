@@ -18,8 +18,8 @@ class RepositorySection extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Image.network(
-              'https://limbuscompany.wiki.gg/images/S918.png',
+            Image.asset(
+              'lib/images/004_Rokiki.png',
               width: 160,
               height: 160,
               fit: BoxFit.contain,

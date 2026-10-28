@@ -10,6 +10,10 @@ class PortfolioHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imagePath = section == PortfolioSection.repository
+        ? 'lib/images/imagen-porfolio-qr.png'
+        : 'lib/images/imagen-porfolio-icono.png';
+
     return Column(
       children: [
         Container(
@@ -36,10 +40,8 @@ class PortfolioHeader extends StatelessWidget {
             child: Row(
               children: [
                 ClipOval(
-                  child: Image.network(
-                    section == PortfolioSection.repository
-                        ? 'https://decopolis.com/actualidad/wp-content/uploads/2025/07/parque-infantil-scaled.jpg'
-                        : 'https://limbuscompany.wiki.gg/images/thumb/E505_2_2.png/320px-E505_2_2.png',
+                  child: Image.asset(
+                    imagePath,
                     width: 80,
                     height: 80,
                     fit: BoxFit.cover,
