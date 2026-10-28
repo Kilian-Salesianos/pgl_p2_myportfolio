@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  go_router: ^18.1.1
+  qr_flutter: ^4.1.0
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +19,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/images/background-image.jpg
+    - lib/images/004_Rokiki.png
+    - lib/images/imagen-porfolio-icono.png
+    - lib/images/imagen-porfolio-qr.png
