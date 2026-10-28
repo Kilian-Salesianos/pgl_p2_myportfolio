@@ -17,10 +17,17 @@ void main() {
     await tester.tap(find.text('Porfolio'));
     await tester.pumpAndSettle();
 
-    expect(
-      find.text('El contenido del porfolio se añadirá próximamente.'),
-      findsOneWidget,
-    );
+    expect(find.text('Este es mi portfolio modificado'), findsOneWidget);
+    expect(find.text('Mis hobbies'), findsOneWidget);
+    expect(find.text('Mi repositorio'), findsOneWidget);
+
+    await tester.tap(find.text('Mi repositorio'));
+    await tester.pumpAndSettle();
+    expect(find.text('Todos deben jugar limbus company'), findsOneWidget);
+
+    await tester.tap(find.text('Mis hobbies'));
+    await tester.pumpAndSettle();
+    expect(find.text('Leer libros'), findsOneWidget);
 
     await tester.tap(find.byIcon(Icons.menu));
     await tester.pumpAndSettle();

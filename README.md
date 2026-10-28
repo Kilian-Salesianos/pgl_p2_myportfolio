@@ -6,7 +6,8 @@ compartido.
 ## Rutas
 
 - `/`: pantalla Home.
-- `/porfolio`: pantalla Porfolio, preparada para añadir contenido.
+- `/porfolio`: pantalla Porfolio con secciones de hobbies y repositorio, que se
+  alternan mediante los botones inferiores.
 
 Las pantallas están en `lib/screens/` y las opciones de navegación en
 `lib/widgets/app_drawer.dart`.
