@@ -15,7 +15,7 @@ class AppDrawer extends StatelessWidget {
           const DrawerHeader(
             child: Align(
               alignment: Alignment.bottomLeft,
-              child: Text('My Portfolio', style: TextStyle(fontSize: 24)),
+              child: Text('Navegación', style: TextStyle(fontSize: 24)),
             ),
           ),
           _DrawerItem(
