@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import 'screens/animal_crud-screen.dart';
+import 'screens/animal_crud_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/porfolio_screen.dart';
 

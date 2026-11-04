@@ -20,7 +20,4 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/images/background-image.jpg
-    - lib/images/004_Rokiki.png
-    - lib/images/imagen-porfolio-icono.png
-    - lib/images/imagen-porfolio-qr.png
+    - lib/images/
