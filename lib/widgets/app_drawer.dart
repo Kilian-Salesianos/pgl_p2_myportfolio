@@ -30,6 +30,12 @@ class AppDrawer extends StatelessWidget {
             location: '/porfolio',
             selected: currentLocation == '/porfolio',
           ),
+          _DrawerItem(
+            icon: Icons.pets_outlined,
+            label: 'Animales',
+            location: '/animales',
+            selected: currentLocation == '/animales',
+          ),
         ],
       ),
     );
