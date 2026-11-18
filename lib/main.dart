@@ -4,6 +4,8 @@ import 'package:go_router/go_router.dart';
 import 'screens/animal_crud_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/porfolio_screen.dart';
+import 'screens/user_login_screen.dart';
+import 'screens/user_register_screen.dart';
 
 final _router = GoRouter(
   initialLocation: '/',
@@ -16,6 +18,14 @@ final _router = GoRouter(
     GoRoute(
       path: '/animales',
       builder: (context, state) => const AnimalCrudScreen(),
+    ),
+    GoRoute(
+      path: '/registro',
+      builder: (context, state) => const UserRegisterScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      builder: (context, state) => const UserLoginScreen(),
     ),
   ],
 );
