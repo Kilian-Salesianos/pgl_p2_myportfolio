@@ -145,7 +145,7 @@ class _AnimalCrudScreenState extends State<AnimalCrudScreen> {
               const SizedBox(width: 12),
               Expanded(
                 child: PortfolioFooterButton(
-                  label: 'Borrar',
+                  label: 'Borrar todo',
                   onPressed: _deleteAllAnimals,
                 ),
               ),
